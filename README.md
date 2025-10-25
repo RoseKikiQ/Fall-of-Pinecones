@@ -4,7 +4,7 @@ Fall
 
 Overview
 
-This is a game where you play as a squirrel getting ready for Winter. You must catch falling leaves and acorns to collect enough points to survive.
+Fall of Pinecones is a game where you play as a squirrel getting ready for Winter. You must catch falling leaves and acorns to collect enough points to survive.
 
 How to play:
 
