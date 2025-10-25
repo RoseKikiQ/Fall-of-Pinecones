@@ -1,0 +1,22 @@
+[gd_scene load_steps=4 format=3 uid="uid://cttoah0q1wmrf"]
+
+[ext_resource type="Texture2D" uid="uid://bv34mqah567qo" path="res://N0i8La.png" id="1_gf172"]
+[ext_resource type="Script" uid="uid://cq81hlfheh374" path="res://Maple_leaf.gd" id="1_mnh3x"]
+
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_gf172"]
+radius = 34.0
+height = 68.0
+
+[node name="Maple_Leaf" type="Area2D" groups=["Leaf"]]
+position = Vector2(103, 52)
+script = ExtResource("1_mnh3x")
+metadata/_edit_group_ = true
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+shape = SubResource("CapsuleShape2D_gf172")
+
+[node name="Maple_Leaf" type="Sprite2D" parent="CollisionShape2D"]
+scale = Vector2(0.27220076, 0.25)
+texture = ExtResource("1_gf172")
+
+[connection signal="body_entered" from="." to="." method="_on_body_entered"]

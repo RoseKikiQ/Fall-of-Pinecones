@@ -1,11 +1,15 @@
-[gd_scene load_steps=5 format=3 uid="uid://bdatiu3vm3dvf"]
+[gd_scene load_steps=7 format=3 uid="uid://bdatiu3vm3dvf"]
 
 [ext_resource type="PackedScene" uid="uid://bn525i1se154g" path="res://Squirrel.tscn" id="1_1oj5k"]
+[ext_resource type="Script" uid="uid://bt4kxp22gf86x" path="res://Main_Game.gd" id="1_2pltu"]
 [ext_resource type="Texture2D" uid="uid://cp7dvadsc2620" path="res://free-autumn-pixel-backgrounds-for-game/PNG/background 3/Plan-6.png" id="1_f52ns"]
 [ext_resource type="Texture2D" uid="uid://8ub4jxj8v3n3" path="res://free-autumn-pixel-backgrounds-for-game/PNG/background 2/Plan-1.png" id="6_02kkc"]
 [ext_resource type="Texture2D" uid="uid://pixyu4s815ym" path="res://free-autumn-pixel-backgrounds-for-game/PNG/background 1/Plan-1.png" id="6_f52ns"]
 
+[sub_resource type="LabelSettings" id="LabelSettings_dugkq"]
+
 [node name="Node" type="Node"]
+script = ExtResource("1_2pltu")
 
 [node name="Plan6" type="Sprite2D" parent="."]
 position = Vector2(1132.1876, 284.75)
@@ -18,7 +22,7 @@ scale = Vector2(1.4340278, 1.8506942)
 texture = ExtResource("1_f52ns")
 
 [node name="Plan1" type="Sprite2D" parent="."]
-position = Vector2(305.25, 270.00003)
+position = Vector2(302, 266)
 scale = Vector2(2.4782987, 2.3827162)
 texture = ExtResource("6_02kkc")
 
@@ -35,3 +39,13 @@ position = Vector2(91, 586)
 [node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="StaticBody2D"]
 build_mode = 1
 polygon = PackedVector2Array(0, 0, 0, 648, 1152, 648, 1152, 0)
+
+[node name="Label" type="Label" parent="."]
+unique_name_in_owner = true
+offset_left = 443.0
+offset_top = 27.0
+offset_right = 598.0
+offset_bottom = 50.0
+theme_override_font_sizes/font_size = 16
+text = "Point Counts : 0/500"
+label_settings = SubResource("LabelSettings_dugkq")

@@ -1,0 +1,24 @@
+[gd_scene load_steps=4 format=3 uid="uid://iv12mq45xas3"]
+
+[ext_resource type="Script" uid="uid://c4q4prwsfwlww" path="res://large_acorn.gd" id="1_rkm58"]
+[ext_resource type="Texture2D" uid="uid://thyx4lpyp5h4" path="res://Untitled_Artwork (3).png" id="2_6ed1o"]
+
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_wy4q4"]
+radius = 38.0
+height = 102.0
+
+[node name="Large Acorn" type="Area2D" groups=["LargeAcorn"]]
+position = Vector2(56, 54)
+script = ExtResource("1_rkm58")
+metadata/_edit_group_ = true
+
+[node name="UntitledArtwork(3)" type="Sprite2D" parent="."]
+position = Vector2(7.6293945e-06, 1)
+scale = Vector2(0.053466797, 0.054443356)
+texture = ExtResource("2_6ed1o")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(0, 2)
+shape = SubResource("CapsuleShape2D_wy4q4")
+
+[connection signal="body_entered" from="." to="." method="_on_body_entered"]
